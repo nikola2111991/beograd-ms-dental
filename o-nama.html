@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nama | MS Dental | Dr Miodrag Simic | Zvezdara, Beograd</title>
+  <meta name="description" content="Upoznajte Dr Miodraga Simica i MS Dental ordinaciju na Zvezdari. Ocena 5.0 od 191 pacijenta. Lukijana Musickog 20/G3, Beograd.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root { --primary:#1a5276; --accent:#148f77; --dark:#1c2833; --text:#2c3e50; --light-text:#5d6d7e; --bg:#ffffff; --light-bg:#f8f9fa; --border:#e8ecef; --radius:16px; --shadow:0 4px 24px rgba(0,0,0,0.06); }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--bg); line-height:1.7; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4 { font-family:'Playfair Display',serif; color:var(--dark); line-height:1.3; }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+    .header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1200px; margin:0 auto; }
+    .logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--primary); }
+    .logo span { color:var(--accent); }
+    .nav { display:flex; align-items:center; gap:32px; }
+    .nav a { font-size:0.95rem; font-weight:500; color:var(--text); transition:color 0.2s; }
+    .nav a:hover { color:var(--primary); }
+    .nav a.active { color:var(--primary); }
+    .nav-cta { background:var(--primary); color:#fff !important; padding:10px 24px; border-radius:50px; font-weight:600; }
+    .nav-cta:hover { background:#154360; }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
+    .hamburger span { width:24px; height:2px; background:var(--dark); border-radius:2px; }
+    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.98); backdrop-filter:blur(16px); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:24px; }
+    .mobile-menu.active { display:flex; }
+    .mobile-menu a { font-size:1.2rem; font-weight:500; color:var(--dark); }
+    .mobile-close { position:absolute; top:20px; right:24px; font-size:2rem; cursor:pointer; color:var(--dark); background:none; border:none; }
+
+    .page-hero { padding:140px 24px 64px; background:linear-gradient(135deg, #f8f9fa 0%, #eaf2f8 100%); text-align:center; }
+    .page-hero h1 { font-size:2.8rem; margin-bottom:16px; }
+    .page-hero p { font-size:1.1rem; color:var(--light-text); max-width:560px; margin:0 auto; }
+
+    .story { max-width:800px; margin:0 auto; padding:80px 24px; }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:64px; }
+    .story-image { border-radius:var(--radius); overflow:hidden; }
+    .story-image img { width:100%; height:400px; object-fit:cover; }
+    .story h2 { font-size:1.8rem; margin-bottom:20px; }
+    .story p { color:var(--light-text); font-size:1.02rem; margin-bottom:16px; }
+
+    .about-wide { max-width:1200px; margin:0 auto; padding:0 24px 80px; }
+    .about-wide-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    .about-wide-grid img { width:100%; height:400px; object-fit:cover; border-radius:var(--radius); }
+
+    .stats-section { padding:64px 24px; background:var(--primary); color:#fff; }
+    .stats-grid { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; text-align:center; }
+    .stat-number { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; margin-bottom:4px; }
+    .stat-label { font-size:0.9rem; opacity:0.85; }
+
+    .values { padding:80px 24px; background:var(--light-bg); }
+    .section-title { font-size:2.2rem; text-align:center; margin-bottom:48px; }
+    .values-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; }
+    .value-card { background:#fff; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; }
+    .value-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .value-card img { width:100%; height:200px; object-fit:cover; }
+    .value-card-body { padding:24px; }
+    .value-card h3 { font-size:1.1rem; margin-bottom:8px; font-family:'DM Sans',sans-serif; font-weight:700; }
+    .value-card p { color:var(--light-text); font-size:0.92rem; }
+
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--primary); color:#fff; padding:14px 32px; border-radius:50px; font-weight:600; font-size:1rem; transition:all 0.2s; border:2px solid var(--primary); }
+    .btn-primary:hover { background:#154360; transform:translateY(-2px); }
+
+    .cta-banner { padding:80px 24px; background:var(--dark); color:#fff; text-align:center; }
+    .cta-banner h2 { color:#fff; font-size:2rem; margin-bottom:16px; }
+    .cta-banner p { color:rgba(255,255,255,0.7); margin-bottom:32px; }
+    .btn-white { display:inline-flex; align-items:center; gap:8px; background:#fff; color:var(--primary); padding:14px 32px; border-radius:50px; font-weight:600; transition:all 0.2s; }
+    .btn-white:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+    .footer { padding:40px 24px; text-align:center; border-top:1px solid var(--border); }
+    .footer p { font-size:0.85rem; color:var(--light-text); }
+    .footer a { color:var(--primary); }
+
+    @media (max-width:900px) {
+      .nav { display:none; }
+      .hamburger { display:flex; }
+      .story-grid, .about-wide-grid { grid-template-columns:1fr; }
+      .story-image img, .about-wide-grid img { height:280px; }
+      .stats-grid { grid-template-columns:1fr; gap:24px; }
+      .values-grid { grid-template-columns:1fr; max-width:500px; margin:0 auto; }
+      .page-hero h1 { font-size:2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">MS <span>Dental</span></a>
+    <nav class="nav">
+      <a href="index.html">Pocetna</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="o-nama.html" class="active">O nama</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="tel:+38163617603" class="nav-cta">Pozovite nas</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+  <a href="tel:+38163617603" class="nav-cta">Pozovite nas</a>
+  <a href="index.html">Pocetna</a>
+  <a href="usluge.html">Usluge</a>
+  <a href="o-nama.html" onclick="toggleMenu()">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
+<section class="page-hero">
+  <h1>O nama</h1>
+  <p>Upoznajte ordinaciju kojoj 191 pacijent veruje sa ocenom 5.0.</p>
+</section>
+
+<section class="about-wide" style="padding-top:80px;">
+  <div class="about-wide-grid">
+    <div>
+      <h2 style="font-size:1.8rem; margin-bottom:20px;">MS Dental. Ordinacija Dr Miodraga Simica.</h2>
+      <p style="color:var(--light-text); font-size:1.02rem; margin-bottom:16px;">
+        MS Dental je opsta ordinacija dentalne medicine na Zvezdari, u ulici Lukijana Musickog 20/G3. Iza imena stoji Dr Miodrag Simic, doktor stomatologije koji je svoj rad posvetio jednom cilju: da svaki pacijent izadje zadovoljan.
+      </p>
+      <p style="color:var(--light-text); font-size:1.02rem; margin-bottom:16px;">
+        Rezultati govore umesto reci. 191 pacijent je na Google-u dao maksimalnu ocenu 5.0. Pacijenti najcesce pominju strucnost, pazljivost i besprekoran odnos prema svakom ko udje u ordinaciju.
+      </p>
+      <p style="color:var(--light-text); font-size:1.02rem; margin-bottom:24px;">
+        Ordinacija je moderno opremljena, uredna i prijatna. Sve je osmialjeno da se osecate sigurno. Od cekaonice do stolice.
+      </p>
+      <a href="tel:+38163617603" class="btn-primary">Zakazite pregled</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Ordinacija MS Dental Zvezdara" loading="lazy">
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-number">5.0</div>
+      <div class="stat-label">Google ocena</div>
+    </div>
+    <div>
+      <div class="stat-number">191</div>
+      <div class="stat-label">recenzija pacijenata</div>
+    </div>
+    <div>
+      <div class="stat-number">100%</div>
+      <div class="stat-label">ocena 5 od 5</div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <h2 class="section-title">Na cemu insistiramo</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Strucnost" loading="lazy">
+      <div class="value-card-body">
+        <h3>Strucnost bez kompromisa</h3>
+        <p>Svaki zahvat se radi po najvisin standardima struke. Koristimo proverene materijale i savremenu opremu. Zato pacijenti kazu "profesionalan" i "strucan".</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Pazljiv pristup" loading="lazy">
+      <div class="value-card-body">
+        <h3>Pazljiv, individualan pristup</h3>
+        <p>Svaki pacijent dobija dovoljno vremena za pregled, razgovor i pitanja. Nema zurbe. Nema iznenadjenja. Svaki korak je objasnen pre nego sto pocnemo.</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=600&q=80" alt="Poverenje" loading="lazy">
+      <div class="value-card-body">
+        <h3>Poverenje koje se gradi rezultatima</h3>
+        <p>191 pacijent je dao ocenu 5.0. To se ne postize reklamom. To se postize samo jednim: dobrim radom i postenim odnosom prema svakom ko dodje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Dodjite i uverite se sami</h2>
+  <p>Pozovite nas i zakazite pregled. Bez obaveze.</p>
+  <a href="tel:+38163617603" class="btn-white">063/617-603</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 MS Dental. Sva prava zadrzana.</p>
+  <p style="margin-top:8px;"><small>Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjic</a></small></p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('active') ? 'hidden' : '';
+}
+</script>
+</body>
+</html>
