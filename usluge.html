@@ -4,78 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Usluge | MS Dental | Stomatolog Zvezdara, Beograd</title>
-  <meta name="description" content="Stomatoloske usluge MS Dental ordinacije: opsta stomatologija, estetska, protetika, hirurgija, decja stomatologija. Dr Miodrag Simic, Zvezdara, Beograd.">
+  <meta name="description" content="Stomatološke usluge MS Dental ordinacije: opšta stomatologija, estetska, protetika, hirurgija, dečja stomatologija. Dr Miodrag Simić, Zvezdara, Beograd.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    :root { --primary:#1a5276; --accent:#148f77; --dark:#1c2833; --text:#2c3e50; --light-text:#5d6d7e; --bg:#ffffff; --light-bg:#f8f9fa; --border:#e8ecef; --radius:16px; --shadow:0 4px 24px rgba(0,0,0,0.06); }
-    html { scroll-behavior:smooth; }
-    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--bg); line-height:1.7; -webkit-font-smoothing:antialiased; }
-    h1,h2,h3,h4 { font-family:'Playfair Display',serif; color:var(--dark); line-height:1.3; }
-    img { max-width:100%; display:block; }
-    a { text-decoration:none; color:inherit; }
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-
-    .header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
-    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1200px; margin:0 auto; }
-    .logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--primary); }
-    .logo span { color:var(--accent); }
-    .nav { display:flex; align-items:center; gap:32px; }
-    .nav a { font-size:0.95rem; font-weight:500; color:var(--text); transition:color 0.2s; }
-    .nav a:hover { color:var(--primary); }
-    .nav a.active { color:var(--primary); }
-    .nav-cta { background:var(--primary); color:#fff !important; padding:10px 24px; border-radius:50px; font-weight:600; transition:background 0.2s; }
-    .nav-cta:hover { background:#154360; }
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
-    .hamburger span { width:24px; height:2px; background:var(--dark); border-radius:2px; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.98); backdrop-filter:blur(16px); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:24px; }
-    .mobile-menu.active { display:flex; }
-    .mobile-menu a { font-size:1.2rem; font-weight:500; color:var(--dark); }
-    .mobile-close { position:absolute; top:20px; right:24px; font-size:2rem; cursor:pointer; color:var(--dark); background:none; border:none; }
-
-    .page-hero { padding:140px 24px 64px; background:linear-gradient(135deg, #f8f9fa 0%, #eaf2f8 100%); text-align:center; }
-    .page-hero h1 { font-size:2.8rem; margin-bottom:16px; }
-    .page-hero p { font-size:1.1rem; color:var(--light-text); max-width:560px; margin:0 auto; }
-
-    .services-grid { max-width:1200px; margin:0 auto; padding:64px 24px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; }
-    .service-card { border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:#fff; transition:transform 0.3s, box-shadow 0.3s; }
-    .service-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-    .service-card img { width:100%; height:200px; object-fit:cover; }
-    .service-card-body { padding:24px; }
-    .service-card h3 { font-size:1.15rem; margin-bottom:8px; font-family:'DM Sans',sans-serif; font-weight:700; }
-    .service-card p { color:var(--light-text); font-size:0.92rem; margin-bottom:16px; }
-    .service-tag { display:inline-block; background:rgba(26,82,118,0.08); color:var(--primary); padding:4px 12px; border-radius:50px; font-size:0.8rem; font-weight:600; }
-
-    .service-detail { max-width:1200px; margin:0 auto; padding:64px 24px; }
-    .detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:64px; }
-    .detail-grid.reverse { direction:rtl; }
-    .detail-grid.reverse > * { direction:ltr; }
-    .detail-content h2 { font-size:1.8rem; margin-bottom:16px; }
-    .detail-content p { color:var(--light-text); font-size:1rem; margin-bottom:20px; }
-    .detail-image { border-radius:var(--radius); overflow:hidden; }
-    .detail-image img { width:100%; height:320px; object-fit:cover; }
-    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--primary); color:#fff; padding:14px 32px; border-radius:50px; font-weight:600; font-size:1rem; transition:all 0.2s; border:2px solid var(--primary); }
-    .btn-primary:hover { background:#154360; transform:translateY(-2px); box-shadow:0 8px 24px rgba(26,82,118,0.25); }
-
-    .cta-banner { padding:80px 24px; background:var(--dark); color:#fff; text-align:center; }
-    .cta-banner h2 { color:#fff; font-size:2rem; margin-bottom:16px; }
-    .cta-banner p { color:rgba(255,255,255,0.7); margin-bottom:32px; font-size:1.05rem; }
-    .btn-white { display:inline-flex; align-items:center; gap:8px; background:#fff; color:var(--primary); padding:14px 32px; border-radius:50px; font-weight:600; transition:all 0.2s; }
-    .btn-white:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
-
-    .footer { padding:40px 24px; text-align:center; border-top:1px solid var(--border); }
-    .footer p { font-size:0.85rem; color:var(--light-text); }
-    .footer a { color:var(--primary); }
-
-    @media (max-width:900px) {
-      .nav { display:none; }
-      .hamburger { display:flex; }
-      .services-grid { grid-template-columns:1fr; max-width:500px; }
-      .detail-grid, .detail-grid.reverse { grid-template-columns:1fr; direction:ltr; }
-      .page-hero h1 { font-size:2rem; }
-    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--primary:#1a5276;--accent:#148f77;--dark:#1c2833;--text:#2c3e50;--light-text:#5d6d7e;--bg:#fff;--light-bg:#f8f9fa;--border:#e8ecef;--radius:16px;--shadow:0 4px 24px rgba(0,0,0,.06)}
+    html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--dark);line-height:1.3}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto}
+    .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--primary)}.logo span{color:var(--accent)}
+    .nav{display:flex;align-items:center;gap:32px}.nav a{font-size:.95rem;font-weight:500;color:var(--text);transition:color .2s}.nav a:hover,.nav a.active{color:var(--primary)}
+    .nav-cta{background:var(--primary);color:#fff!important;padding:10px 24px;border-radius:50px;font-weight:600}.nav-cta:hover{background:#154360}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}.hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}.mobile-menu.active{display:flex}.mobile-menu a{font-size:1.2rem;font-weight:500;color:var(--dark)}
+    .mobile-close{position:absolute;top:20px;right:24px;font-size:2rem;cursor:pointer;color:var(--dark);background:none;border:none}
+    .page-hero{padding:140px 24px 64px;background:linear-gradient(135deg,#f8f9fa 0%,#eaf2f8 100%);text-align:center}
+    .page-hero h1{font-size:2.8rem;margin-bottom:16px}.page-hero p{font-size:1.1rem;color:var(--light-text);max-width:560px;margin:0 auto}
+    .services-grid{max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+    .service-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;transition:transform .3s,box-shadow .3s}.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .service-card img{width:100%;height:200px;object-fit:cover}
+    .service-card-body{padding:24px}.service-card h3{font-size:1.15rem;margin-bottom:8px;font-family:'DM Sans',sans-serif;font-weight:700}.service-card p{color:var(--light-text);font-size:.92rem;margin-bottom:16px}
+    .service-tag{display:inline-block;background:rgba(26,82,118,.08);color:var(--primary);padding:4px 12px;border-radius:50px;font-size:.8rem;font-weight:600}
+    .service-detail{max-width:1200px;margin:0 auto;padding:64px 24px}
+    .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+    .detail-content h2{font-size:1.8rem;margin-bottom:16px}.detail-content p{color:var(--light-text);font-size:1rem;margin-bottom:20px}
+    .detail-image{border-radius:var(--radius);overflow:hidden}.detail-image img{width:100%;height:320px;object-fit:cover}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;font-size:1rem;transition:all .2s;border:2px solid var(--primary)}.btn-primary:hover{background:#154360;transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,82,118,.25)}
+    .cta-banner{padding:80px 24px;background:var(--dark);color:#fff;text-align:center}.cta-banner h2{color:#fff;font-size:2rem;margin-bottom:16px}.cta-banner p{color:rgba(255,255,255,.7);margin-bottom:32px;font-size:1.05rem}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--primary);padding:14px 32px;border-radius:50px;font-weight:600;transition:all .2s}.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .footer{padding:40px 24px;text-align:center;border-top:1px solid var(--border)}.footer p{font-size:.85rem;color:var(--light-text)}.footer a{color:var(--primary)}
+    @media(max-width:900px){.nav{display:none}.hamburger{display:flex}.services-grid{grid-template-columns:1fr;max-width:500px}.detail-grid{grid-template-columns:1fr}.page-hero h1{font-size:2rem}}
   </style>
 </head>
 <body>
@@ -84,7 +46,7 @@
   <div class="header-inner">
     <a href="index.html" class="logo">MS <span>Dental</span></a>
     <nav class="nav">
-      <a href="index.html">Pocetna</a>
+      <a href="index.html">Početna</a>
       <a href="usluge.html" class="active">Usluge</a>
       <a href="o-nama.html">O nama</a>
       <a href="kontakt.html">Kontakt</a>
@@ -97,38 +59,38 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMenu()">&times;</button>
   <a href="tel:+38163617603" class="nav-cta">Pozovite nas</a>
-  <a href="index.html">Pocetna</a>
+  <a href="index.html">Početna</a>
   <a href="usluge.html" onclick="toggleMenu()">Usluge</a>
   <a href="o-nama.html">O nama</a>
   <a href="kontakt.html">Kontakt</a>
 </div>
 
 <section class="page-hero">
-  <h1>Nase usluge</h1>
-  <p>Kompletna stomatoloska zastita na jednom mestu. Od pregleda do zavrsnog osmeha.</p>
+  <h1>Naše usluge</h1>
+  <p>Kompletna stomatološka zaštita na jednom mestu. Od pregleda do završnog osmeha.</p>
 </section>
 
 <div class="services-grid">
   <div class="service-card">
-    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Opsti pregled" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Opšti pregled" loading="lazy">
     <div class="service-card-body">
       <h3>Preventivni pregledi</h3>
       <p>Redovan pregled je najjeftinija investicija u zdravlje zuba. Pregled, dijagnostika, savet i plan terapije.</p>
-      <span class="service-tag">Preporucujemo svakih 6 meseci</span>
+      <span class="service-tag">Preporučujemo svakih 6 meseci</span>
     </div>
   </div>
   <div class="service-card">
-    <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Lecenje zuba" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Lečenje zuba" loading="lazy">
     <div class="service-card-body">
-      <h3>Lecenje zuba i plombe</h3>
+      <h3>Lečenje zuba i plombe</h3>
       <p>Popravka karijesa, zamena starih plombi, estetske kompozitne ispune. Bezbolno, precizno, sa garancijom.</p>
-      <span class="service-tag">Najcesca usluga</span>
+      <span class="service-tag">Najčešća usluga</span>
     </div>
   </div>
   <div class="service-card">
     <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80" alt="Endodoncija" loading="lazy">
     <div class="service-card-body">
-      <h3>Lecenje kanala korena</h3>
+      <h3>Lečenje kanala korena</h3>
       <p>Endodontska terapija savremenim metodama. Spasavamo zube koje drugi vadite. Precizno, temeljno, dugotrajno.</p>
       <span class="service-tag">Endodoncija</span>
     </div>
@@ -137,15 +99,15 @@
     <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Estetska stomatologija" loading="lazy">
     <div class="service-card-body">
       <h3>Estetska stomatologija</h3>
-      <p>Izbeljivanje, bonding, estetske korekcije. Osmeh kakav ste oduvek zeleli, sa prirodnim rezultatom.</p>
-      <span class="service-tag">Za savrseni osmeh</span>
+      <p>Izbeljivanje, bonding, estetske korekcije. Osmeh kakav ste oduvek želeli, sa prirodnim rezultatom.</p>
+      <span class="service-tag">Za savršeni osmeh</span>
     </div>
   </div>
   <div class="service-card">
     <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Protetika" loading="lazy">
     <div class="service-card-body">
       <h3>Protetika</h3>
-      <p>Krunice, mostovi, proteze. Nadoknadite izgubljene zube sa resenjima koja izgledaju i funkcionisu kao prirodni.</p>
+      <p>Krunice, mostovi, proteze. Nadoknadite izgubljene zube sa rešenjima koja izgledaju i funkcionišu kao prirodni.</p>
       <span class="service-tag">Krunice i mostovi</span>
     </div>
   </div>
@@ -153,20 +115,20 @@
     <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80" alt="Oralna hirurgija" loading="lazy">
     <div class="service-card-body">
       <h3>Oralna hirurgija</h3>
-      <p>Vadjenje zuba, hirurske ekstrakcije, apikotomije. Precizno i sa minimalnim oporavkom.</p>
+      <p>Vađenje zuba, hirurške ekstrakcije, apikotomije. Precizno i sa minimalnim oporavkom.</p>
       <span class="service-tag">Hirurgija</span>
     </div>
   </div>
 </div>
 
-<section class="service-detail" style="background:var(--light-bg); padding:80px 24px;">
-  <div style="max-width:1200px; margin:0 auto;">
+<section class="service-detail" style="background:var(--light-bg);padding:80px 24px;">
+  <div style="max-width:1200px;margin:0 auto;">
     <div class="detail-grid">
       <div class="detail-content">
-        <h2>Sta vas ocekuje na prvom pregledu</h2>
-        <p>Dr Simic posvecuje vreme svakom pacijentu. Nema zurbe, nema neprijatnih iznenadjenja. Na prvom pregledu dobijate kompletan uvid u stanje vasih zuba, detaljan plan terapije i jasan odgovor na svako pitanje.</p>
-        <p>Pacijenti to prepoznaju. Marija Andric je napisala: "Strucan i pazljiv. Sve pohvale." To je standard koji primenjujemo na svakog pacijenta.</p>
-        <a href="tel:+38163617603" class="btn-primary">Zakazite prvi pregled</a>
+        <h2>Šta vas očekuje na prvom pregledu</h2>
+        <p>Dr Simić posvećuje vreme svakom pacijentu. Nema žurbe, nema neprijatnih iznenađenja. Na prvom pregledu dobijate kompletan uvid u stanje vaših zuba, detaljan plan terapije i jasan odgovor na svako pitanje.</p>
+        <p>Pacijenti to prepoznaju. Marija Andrić je napisala: "Stručan i pažljiv. Sve pohvale." To je standard koji primenjujemo na svakog pacijenta.</p>
+        <a href="tel:+38163617603" class="btn-primary">Zakažite prvi pregled</a>
       </div>
       <div class="detail-image">
         <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80" alt="Pregled u MS Dental ordinaciji" loading="lazy">
@@ -177,20 +139,17 @@
 
 <section class="cta-banner">
   <h2>Imate pitanje o nekoj usluzi?</h2>
-  <p>Pozovite nas i sve cemo objasniti pre nego sto dodjete.</p>
+  <p>Pozovite nas i sve ćemo objasniti pre nego što dođete.</p>
   <a href="tel:+38163617603" class="btn-white">063/617-603</a>
 </section>
 
 <footer class="footer">
-  <p>&copy; 2026 MS Dental. Sva prava zadrzana.</p>
-  <p style="margin-top:8px;"><small>Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjic</a></small></p>
+  <p>&copy; 2026 MS Dental. Sva prava zadržana.</p>
+  <p style="margin-top:8px;"><small>Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjić</a></small></p>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('active');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('active') ? 'hidden' : '';
-}
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');document.body.style.overflow=document.getElementById('mobileMenu').classList.contains('active')?'hidden':''}
 </script>
 </body>
 </html>
